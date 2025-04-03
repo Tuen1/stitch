@@ -1,0 +1,9 @@
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/install/strip.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/install/local.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/install.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/cnpy-static.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/cnpy.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/list_install_components.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/example1.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/edit_cache.dir
+/home/nvidia/ljw/videoStitch/cnpy-master/build/CMakeFiles/rebuild_cache.dir

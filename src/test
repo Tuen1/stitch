@@ -1,0 +1,50 @@
+
+// cv::Mat process_and_stitch_images(const cv::Mat& img_left, const cv::Mat& img_mid, const cv::Mat& img_right, 
+//     const CalibrationData& data, const vector<Point>& source_coords,const cv::Mat& H_left,const cv::Mat& H_right) {
+
+//     Mat img_left_proj = apply_cylinder_projection(img_left, data.rows, data.output_cols,
+//         vector<int>(data.target_indices, data.target_indices + data.target_indices_shape[0]),
+//         source_coords);
+
+//     // 处理中图和右图的柱面投影
+//     Mat img_mid_left = apply_cylinder_projection(img_mid, data.rows, data.output_cols,
+//         vector<int>(data.target_indices, data.target_indices + data.target_indices_shape[0]),
+//         source_coords);
+    
+//     Mat img_mid_right = img_mid_left.clone();
+
+//     Mat img_right_proj = apply_cylinder_projection(img_right, data.rows, data.output_cols,
+//         vector<int>(data.target_indices, data.target_indices + data.target_indices_shape[0]),
+//         source_coords);
+
+//     // 左中颜色平衡和配准
+//     Mat left_warped, left_canvas;
+//     ColorBlance::color_balance_peizhun_left(img_left_proj, img_mid_left.clone(), data.W,
+//                                            data.y_s_1, data.y_x_1, H_left,
+//                                            left_warped, left_canvas);
+//     // 右中颜色平衡和配准
+//     Mat right_warped, right_canvas;
+//     ColorBlance::color_balance_peizhun_right(img_mid_right.clone(), img_right_proj, data.W,
+//         data.y_s_1, data.y_x_1, H_right,
+//         right_canvas, right_warped);
+
+//     float* weights_left = data.weights_left;
+//     float* weights_right = data.weights_right;
+
+
+//     // 调用stitch函数
+//     cv::Mat result_left;
+//     stitch(left_warped, left_canvas, weights_left, result_left);
+
+//     cv::Mat result_right;
+//     stitch(right_canvas, right_warped, weights_right, result_right);
+
+    
+//     // 最终拼接和裁剪
+//     Mat final_img;
+//     hconcat(result_left(Rect(0, 0, data.a, result_left.rows)),
+//            result_right(Rect(data.b, 0, result_right.cols - data.b, result_right.rows)),
+//            final_img);
+
+//     return final_img(Rect(500, 0, final_img.cols - 1000, final_img.rows)).clone();
+// }
